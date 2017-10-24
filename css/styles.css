@@ -1,0 +1,96 @@
+body {
+	background: url('../images/background2.jpg');
+	background-size: cover;
+}
+
+.jumbotron {
+	background-color:#ED5D40;
+	background: url('../images/background.jpg');
+	color: #F0EAD6;
+	    text-shadow:
+    -1px -1px 0 #000,
+	1px 1px 0 #000;  
+}
+
+a:hover { 
+	text-decoration: underline 
+}
+
+a { 
+	color: #F0EAD6; 
+	text-decoration: none; 
+}
+
+.title-text {
+	font-family: 'Flamante';
+    color: #F0EAD6;
+    text-shadow:
+    -1px -1px 0 #000,
+	1px 1px 0 #000;  
+}
+
+p {
+	font-family: sans-serif;
+}
+
+@font-face {
+	font-family: 'Flamante';
+	src: url('../fonts/Flamante/Flamante-Serif-FFP.ttf');
+	font-weight: 500;
+}
+
+.lead {
+	margin-top: 20px;
+	font-family: sans-serif;
+	text-shadow: none;
+}
+
+.main-heading {
+	margin-top: -40px;
+	margin-bottom: 20px;
+}
+
+#time {
+	color: white;
+	height: 200px;
+	width: 300px;
+}
+
+.steps {
+/* 	background-color: #F0EAD6; */
+	color: black;
+	text-shadow: none;
+	background-color: #F0EAD6;
+	padding: 5px;
+}
+
+#header-center {
+	border: none;
+}
+
+.time {
+	display: inline-block;
+}
+
+.colon {
+	font-size: 125px;
+}
+
+.task-button {
+	background-color: dimgray;
+}
+
+.task-form {
+	width: 60%;
+}
+
+.time {
+	font-size: 125px;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px 1px 0 #000; 
+}
+
+hr {
+	background-color: blue;
+}

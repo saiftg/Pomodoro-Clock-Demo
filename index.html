@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catch-Up! | Productivity Timer</title>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <!-- BOOTSTRAP JAVASCRIPT PLUGIN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--   <script type="text/javascript" src="js/countdowntimermod.js"></script>
+ -->
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/ticker.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- JAVASCRIPT -->
+  <!-- <script type="text/javascript" src="js/scripts.js"></script> -->
+  
+</head>
+<body>
+
+  <!-- Begin top container -->
+  <div class="container">
+
+    <!-- BEGIN JUMBOTRON -->
+    <div class="jumbotron main-heading jumbotron-fluid text-center">
+
+      <div class="container">
+
+        <!-- Catch-Up! HEADER -->
+        <div class = "row title-logo">
+        <div class="logo"></div>  
+        
+          <h1 class="display-3 title title-text">Catch-Up!</h1>
+        </div>
+
+        <!-- SUMMARY -->
+        <div id="slideToggle">
+        <p class="lead" >A timer based on the Pomodoro Technique</p>
+        </div>
+
+        <div class="clear">
+        <br/>
+            <div class="slideTogglebox">
+              <center>
+                <p><h2 style="color: white; font-size: 19px;">The Pomodoro Technique</h2> 
+                  <br>a method that can "help anyone to focus."</p>
+              </center>
+              <br>
+                <ol>
+                    <li>Choose a task to be accomplished.</li>
+                    <li>Set the time on appropriate field for Work and Break (25min work and 5 min break are the defaults).</li>
+                    <li>Work on the task until work session is over.</li>
+                    <li>Take a short break (Rest timer will notify when it's over).</li>
+                    <li>Every 4 Pomodoros take a longer break (30 min).</li>
+                </ol>
+            </div> <!-- end slideTogglebox -->
+
+          </div> <!-- end class "clear" -->
+
+
+       <div class="steps col-xs-12">
+          <div class="col-xs-12 header-box-right">
+            <div class="col-xs-6 work">
+              <div><h3 class="col-xs-12 work-time text-center">Work Time (min)</h3></div>
+              <div class="btn-group">
+                    <div class="btn btn-default btn-lg" id="work-minus">-</div>
+                    <div style = "text-decoration: none; color: black; cursor: default;" class="btn btn-lg minutes-interval">25</div>
+                    <div class="btn btn-default btn-lg" id="work-plus">+</div>
+                </div>
+            </div>
+    
+            <div class="col-xs-6">
+              <div><h3 class="col-xs-12 text-center">Play Time (min)</h3></div>
+              <div class="btn-group">
+                    <div class="btn btn-default btn-lg" id="play-minus">-</div>
+                    <div style = "text-decoration: none; color: black; cursor: default;" class="btn btn-lg" id="playTimer">05</div>
+                    <div class="btn btn-default btn-lg" id="play-plus">+</div>
+              </div>
+           </div>
+        </div>
+
+      </div> <!-- end of Tasks and Work/Play Time / steps col-xs-12 -->
+
+      </div> <!-- end of CONTAINER -->
+
+
+    </div> <!-- end of JUMBOTRON -->
+
+
+      <!-- Begin second jumbotron -->
+      <div class="jumbotron text-center">
+        <div class="text-center"><h2 id="current-session">Work Session</h2></div>
+        <div class="flip-container">
+          <div class="flipper">
+            
+                <div class="display-3 time time-box front">
+                  <div class="minutes time">25</div>
+                  <div class="colon time">:</div>
+                  <div class="seconds time">00</div>
+                </div>
+                <!-- behind clock -->
+                <div class="display-3 back">
+                  <!-- <img src="images/chucknorris.jpg"/> version for chuck jokes -->
+                  <div class="minutes time">25</div>
+                  <div class="colon time">:</div>
+                  <div class="seconds time">00</div>
+                </div>
+          </div>
+        </div>
+        <!-- <button id="myCard">rotate card</button> test button to flip the card  -->
+       
+        <hr />
+
+        <div class="buttons">
+
+          <button class="btn btn-danger btn-lg col-xs-6" href="#" id="worktime">Time Worked
+          </button>
+          <button class="btn btn-danger btn-lg col-xs-6" href="#" id="breaktime">Time on Break
+          </button>
+          <button class="btn btn-danger btn-lg" href="#" id="start" onclick="startTimer()">Start
+          </button>
+          <!-- <button class="btn btn-primary btn-lg" href="#" id="pause" onclick="pause()">Pause -->
+          <!-- </button> -->
+          <button class="btn btn-lg" href="#" id="reset" onclick="reset()">Reset
+          </button>
+        </div> <!-- end of class buttons -->
+
+
+            <div id="box">
+      <!-- this div encapsulates button is needed for test button to appear on hover effect -->
+      <!-- data-toggle="modal" -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" id="manual">Test jokes</button></div>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content open-window">
+          <img id = "chuck-picture" src = "images/chucknorris.jpg"/>
+          <div id = "they-say">They Say:
+             <div id = "chuck-joke"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <hr />
+
+        <footer>
+        <br>
+          <div>
+          <!-- music player:   -->
+          <iframe class="video" width="400" height="34" src="https://www.youtube.com/embed/Rb0UmrCXxVA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div> 
+          <br>
+          <div>&copy; 2017 | <a href="https://github.com/niktechnopro/Pomodoro-Clock">Focus! Team</a> Jennifer, Nick, Zach, Saif,  Taylor <!-- for class project by <span id="team">Focus! Team</span></div>
+            <div id="teamTogglebox">
+              Focus! Team: Jennifer, Nick, Zach, Saiph, Taylor -->
+            </div>
+        </footer> <!-- end of footer -->
+
+      </div> <!-- End second jumbotron -->
+  </div> <!-- End of top container -->
+
+<!-- ******************************************************************* -->
+</body>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script type="text/javascript" src="js/countdowntimermodnik1.js"></script>
+
+
+
+
+</html>
