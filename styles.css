@@ -1,0 +1,355 @@
+body {
+
+/*	background: url('../images/background2.jpg');*/
+background-color: #5A0000;
+	background-size: cover;
+
+/*	background: url('../images/background3.jpg');*/
+	/*background-color: lightgrey;*/
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+}
+
+@keyframes bounce {
+   
+}
+
+0% {
+	transform:translateY(-100%);
+	opacity: 0;
+}
+
+5% {
+  	transform:translateY(-100%);
+    opacity: 0;
+}
+
+15% {
+  transform:translateY(0);
+  padding-bottom: 5px;
+}
+
+
+
+
+@font-face {
+	font-family: 'Flamante';
+	src: url('../fonts/Flamante/Flamante-Serif-FFP.ttf');
+	/*font-weight: 500;*/
+}
+
+
+.jumbotron {
+/*	background-color:#ED5D40;*/
+/*	background: url('../images/background4.jpg');*/
+	background: url('../images/grey-background-facebook-3.svg');
+	background-color: white;
+
+	color: black;
+	
+/*	text-shadow:
+    -1px -1px 0 #000,
+	1px 1px 0 #000; */
+
+	/* border: 2px solid #F0EAD6;  */
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 700px;
+	margin: 0 auto;
+
+}
+
+.jumbotron h1 {
+	/*Overrides jumbotron's h1*/
+	font-family: 'Flamante';
+	color: #800000; 
+	display: inline-block;
+	line-height: 50%;
+	margin-top: 20px;
+  text-shadow:
+    -1px -1px 0 white,
+	1px 1px 0 white; 
+}
+
+.jumbotron h2 {
+	/*Overrides jumbotron's h2*/
+	font-family: 'Flamante';
+	color: black;
+	font-size: 47px;
+	display: inline-block;
+	line-height: 50%;
+	margin-top: 0;
+/*    text-shadow:
+    -1px -1px 0 #000,
+	1px 1px 0 #000;  */
+}
+
+.jumbotron h3 {
+	/*Overrides jumbotron's h2*/
+	font-family: 'Flamante';
+	color: black; 
+	font-size: 16px;
+	display: inline-block;
+	line-height: 50%;
+	margin-top: 12px;
+/*    text-shadow:
+    -1px -1px 0 #000,
+	1px 1px 0 #000;  */
+}
+
+.jumbotron p {
+	font-family: sans-serif;
+	color: black;
+	margin-top: 12px;
+	text-shadow: none;
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
+.jumbotron span { 
+	color: #800000;
+
+	 }
+
+
+/*.jumbotron a:hover {
+	color: #800000; 
+}*/
+
+/*.lead {
+	margin-top: 20px;
+	font-family: sans-serif;
+	text-shadow: none;
+	margin-bottom: 0px;
+	font-size: 14px;
+}*/
+
+element.style {
+	color: black;
+	}
+
+.main-heading {
+	margin-top: -40px;
+	margin-bottom: 20px;
+}
+
+#time {
+	color: grey;
+	height: 200px;
+	width: 300px;
+}
+
+.steps {
+/* 	background-color: #F0EAD6; */
+	color: grey;
+	text-shadow: none;
+	/* background-color: #F0EAD6; */
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#header-center {
+	border: none;
+}
+
+.colon {
+	font-size: 125px;
+	color: #800000; 
+}
+
+.task-button {
+	background-color: dimgray;
+	margin-top: 1%
+	
+}
+
+.task-form {
+	width: 60%;
+}
+
+.time {
+	display: inline-block;
+	font-size: 125px;
+	text-shadow:
+	-1px -1px 0 #000,
+	1px 1px 0 #000; 
+	text-shadow: 6px 6px 0px rgba(240,234,214,0.2);
+		
+		
+}
+
+.jumbo-box {
+	bottom: 0px;
+}
+
+
+.btn {
+	border-radius: 30px;
+	border: 1px solid #F0EAD6;
+	box-shadow: 2px 2px 2px 1px black;
+
+
+}
+
+.time-box {
+	/* border: 2px solid #F0EAD6; */
+	padding: 0px 10px;
+}
+
+.work {
+	/* border-right: 1px solid black; */
+
+}
+
+.car-item {
+	margin-left: 15%;
+
+}
+
+.btn-remove {
+	float: right;
+	font-size: 12px;
+	
+	margin: 0px 5px;
+}
+
+
+.break-interval-form {
+	color: black;
+	float: left;
+
+}
+
+.work-interval-form {
+	color: black;
+	/* width: 25%; */
+	float: right;
+}
+
+.play {
+	text-align: left;
+	font-size: 20px;
+}
+
+.work-time {
+	text-align: right;
+	font-size: 20px;
+}
+
+.logo {
+	content:url(../images/new_logo.png);
+    max-width: 18%;
+    height: auto;
+	display: inline-block;
+	margin-bottom: -10px;
+	margin-right: -15px;
+	position: relative;
+	padding-right: 20px;
+}
+
+
+/*slide down manu for development team*/
+#teamTogglebox{
+	position: absolute;
+	width: 400px;
+	left: 36%;
+}
+
+
+/*drop down menu with instructions*/
+.slideTogglebox{
+		position: absolute;
+		left:32%;
+		text-align: left;
+		padding:8px;
+		margin:16px;
+		margin-top: 0;
+		border:3px solid white;
+		width:500px;
+		height:340px;
+		background-color: grey;
+		color: white;
+        font-size: 18px;
+        z-index: 6;
+	}
+
+/*.clear{
+		clear:both;
+}*/
+
+/*sizing image of chuck norris*/
+.back img{
+	width:450px;
+	
+}
+/*flip effect start*/
+.flip-container{
+	perspective: 1000px;
+	/*border: 5px solid green;*/
+	/*transform: rotateY(180deg);*/
+}
+/*
+.flip-container:hover .flipper{
+	transform:rotateY(180deg);
+}*/
+
+.flip-container .front .back{
+	width: 500px;
+	margin: 0 auto;
+}
+
+.flipper{
+	position: relative;
+/*    specifies how long transition would take*/
+	-webkit-transition: all 1s;
+/*    the transform-style property specifies how nested elements are rendered in 3D space.(flat - do not preserve, preserve-3d - will preserve*/
+    transform-style: preserve-3d;
+}
+
+.front, .back{
+	position: relative;
+	backface-visibility: hidden;
+	}
+
+.front{
+	transform: rotateX(0deg);
+	z-index: 2;
+}
+
+.back{
+	margin-top: -177px;
+	transform: rotateX(180deg);
+}
+/*helper class to add to flipper to make fields flip from JS*/
+.flip{
+	transform:rotateX(180deg); 
+}
+/*flip effect end*/
+
+#start {
+	background-color: #800000;
+}
+
+#reset {
+	background-color: white;
+	color: #800000;
+}
+
+.btn-default {
+	background-color: #800000;
+	color: white;
+}
+
+#slideToggle:hover {
+	cursor: pointer;
+}
+
+
+
+
+
+
+
